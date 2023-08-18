@@ -99,7 +99,6 @@ public class Arius2DPlatMovement : MonoBehaviour
     void FixedUpdate()
     {
         isGrounded = Physics2D.OverlapCircle(groundcheck.position, checkRadius, whatIsGround);
-
         rb.velocity = new Vector2(moveInputX * movementSpeed * Time.fixedDeltaTime, rb.velocity.y);
         Sprint();
     }
